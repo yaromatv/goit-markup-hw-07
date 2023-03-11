@@ -22,12 +22,25 @@
         />
     </head>
     <body>
-        <!-- <header class="header-border">
+        <!-- HEADER PC HTML -->
+        <header class="header-border">
             <div class="header container">
                 <nav class="header-nav">
                     <a class="logo link" href="./index.html"
                         ><span class="logo-accent">Web</span>Studio</a
                     >
+                    <button
+                        type="button"
+                        class="mob-header-menu-button"
+                        data-menu-open
+                    >
+                        <svg width="32" height="22">
+                            <use
+                                class="burger-icon"
+                                href="./images/sprite.svg#icon-menu-burger"
+                            ></use>
+                        </svg>
+                    </button>
                     <ul class="nav-menu">
                         <li>
                             <a class="link current" href="./index.html"
@@ -57,7 +70,109 @@
                     </ul>
                 </address>
             </div>
-        </header> -->
+
+            <!-- MOBILE HEADER HTML -->
+            <div class="mob-menu is-hidden" data-menu>
+                <div class="mob-container">
+                    <button
+                        type="button"
+                        class="header-close-button"
+                        data-menu-close
+                    >
+                        <svg width="8" height="8" class="close-icon">
+                            <use
+                                href="./images/sprite.svg#icon-close-black"
+                            ></use>
+                        </svg>
+                    </button>
+                    <div class="mob-menu-wrap">
+                        <ul class="mob-nav-menu">
+                            <li>
+                                <a class="link current" href="./index.html"
+                                    >Studio</a
+                                >
+                            </li>
+                            <li>
+                                <a class="link" href="./portfolio.html"
+                                    >Portfolio</a
+                                >
+                            </li>
+                            <li><a class="link" href="">Contacts</a></li>
+                        </ul>
+                        <address class="mob-header-contact">
+                            <ul class="mob-header-contact-list">
+                                <li>
+                                    <a class="link" href="tel:+110001111111"
+                                        >+11 (000) 111-11-11</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="link"
+                                        href="mailto:info@devstudio.com"
+                                        >info@devstudio.com</a
+                                    >
+                                </li>
+                            </ul>
+                            <ul class="mob-social-media-list">
+                                <li>
+                                    <a
+                                        class="social-media-icon"
+                                        href="https://www.instagram.com/"
+                                        target="_blank"
+                                    >
+                                        <svg width="16" height="16">
+                                            <use
+                                                href="./images/sprite.svg#icon-instagram"
+                                            ></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="social-media-icon"
+                                        href="https://twitter.com/tweet"
+                                        target="_blank"
+                                    >
+                                        <svg width="16" height="16">
+                                            <use
+                                                href="./images/sprite.svg#icon-twitter"
+                                            ></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="social-media-icon"
+                                        href="https://www.facebook.com/"
+                                        target="_blank"
+                                    >
+                                        <svg width="16" height="16">
+                                            <use
+                                                href="./images/sprite.svg#icon-facebook"
+                                            ></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="social-media-icon"
+                                        href="https://www.linkedin.com/"
+                                        target="_blank"
+                                    >
+                                        <svg width="16" height="16">
+                                            <use
+                                                href="./images/sprite.svg#icon-linkedin"
+                                            ></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </header>
         <main>
             <!-- HERO HTML -->
             <section class="hero">
@@ -600,7 +715,7 @@
                 </div>
             </div>
         </footer>
-        <!-- <div data-modal class="backdrop is-hidden">
+        <div data-modal class="backdrop is-hidden">
             <div class="modal">
                 <button data-modal-close class="close-modal">
                     <svg width="8" height="8">
@@ -608,6 +723,7 @@
                     </svg>
                 </button>
 
+                <!-- MODAL HTML -->
                 <form class="form">
                     <p>Leave your contacts and we will call you back</p>
                     <div class="form-field">
@@ -684,7 +800,8 @@
                     <button class="hero-button" type="submit">Send</button>
                 </form>
             </div>
-        </div> -->
+        </div>
         <script src="./js/modal.js"></script>
+        <script src="./js/menu.js"></script>
     </body>
 </html>
