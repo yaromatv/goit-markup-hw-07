@@ -125,6 +125,7 @@ body {
     height: 100%;
     background-color: var(--background-color);
     overflow-y: auto;
+    z-index: 1;
 }
 
 .header-close-button {
@@ -326,12 +327,24 @@ body {
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)
         ),
-        url(../images/people-office.jpg);
+        url(../images/hero-mob.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 112px 0;
     margin: 0 auto;
+}
+
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-mob@2x.jpg);
+    }
 }
 
 .hero-title {
@@ -373,16 +386,33 @@ body {
 @media screen and (min-width: 768px) {
     .hero {
         height: 436px;
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-tab.jpg);
     }
 
-    .hero-title {
-        font-size: 56px;
-        line-height: 1.07;
-        max-width: 496px;
-    }
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(
+                    rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)
+                ),
+                url(../images/hero-tab@2x.jpg);
+        }
 
-    .hero-button {
-        margin-top: 48px;
+        .hero-title {
+            font-size: 56px;
+            line-height: 1.07;
+            max-width: 496px;
+        }
+
+        .hero-button {
+            margin-top: 48px;
+        }
     }
 }
 
@@ -390,10 +420,27 @@ body {
     .hero {
         height: 600px;
         padding: 188px 0;
+        background-image: linear-gradient(
+                rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)
+            ),
+            url(../images/hero-desk.jpg);
     }
 
-    .hero-button {
-        margin-top: 48px;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(
+                    rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)
+                ),
+                url(../images/hero-desk@2x.jpg);
+        }
+
+        .hero-button {
+            margin-top: 48px;
+        }
     }
 }
 
@@ -766,6 +813,8 @@ body {
     opacity: 1;
     background-color: rgba(46, 47, 66, 0.4);
 
+    overflow-y: auto;
+
     transition: opacity var(--transition-timing) var(--transition-function);
 }
 
@@ -781,9 +830,10 @@ body {
 
 .modal {
     position: absolute;
-    bottom: 50%;
     left: 50%;
-    transform: translate(-50%, 50%) scale(1);
+    top: 50%;
+
+    transform: translate(-50%, -50%) scale(1);
 
     width: 408px;
     height: 584px;
@@ -942,6 +992,141 @@ body {
     display: block;
 }
 
-/* !!!!!!!!!!!!!!!!!! */
+@media screen and (max-width: 480px) {
+    .modal {
+        display: block;
+        width: calc(100vw - 36px);
+        height: auto;
+    }
+
+    .form button {
+        min-width: 169px;
+        margin: 24px auto 0 auto;
+        display: block;
+    }
+}
+
+@media screen and (max-height: 585px) {
+    .modal {
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -25%) scale(1);
+    }
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!! */
 /* !!! PORTFOLIO MAIN !!! */
-/* !!!!!!!!!!!!!!!!!! */
+/* !!!! NON ADAPTIVE !!!! */
+/* !!!!!!!!!!!!!!!!!!!!!! */
+
+.portfolio-pad {
+    padding: 96px 0 120px 0;
+}
+
+.portfolio-button {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+
+    margin-bottom: 72px;
+}
+
+.filter-button {
+    color: var(--accent-color);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    background-color: var(--accent-color-light);
+    border: 1px solid var(--accent-color-medium);
+    border-radius: 4px;
+
+    display: inline-block;
+    padding: 12px 24px;
+
+    transition: color var(--transition-timing) var(--transition-function),
+        background-color var(--transition-timing) var(--transition-function),
+        box-shadow var(--transition-timing) var(--transition-function),
+        border-color var(--transition-timing) var(--transition-function);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    color: var(--background-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-color: transparent;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+}
+
+.portfolio-item {
+    width: 360px;
+}
+
+/* 
+.portfolio-item:hover,
+.portfolio-item:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+} */
+
+.portfolio-link {
+    display: block;
+
+    transition: box-shadow var(--transition-timing) var(--transition-function);
+}
+
+.portfolio-div {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-link:hover .portfolio-translate,
+.portfolio-link:focus .portfolio-translate {
+    transform: translateY(0%);
+}
+
+.portfolio-translate {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    transform: translateY(100%);
+    transition: transform var(--transition-timing) var(--transition-function);
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--accent-color);
+}
+
+.portfolio-translate-text {
+    padding: 40px 32px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.portfolio .card-text {
+    border: var(--accent-color-medium) solid 1px;
+    border-top: 0;
+}
+
+.portfolio .card-text:hover {
+    border: 1px solid var(--accent-color-light);
+    border-top: 0;
+}

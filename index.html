@@ -12,7 +12,6 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <!-- <link href="./css/styles.css" rel="stylesheet" /> -->
         <link href="./css/styles adaptive.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,7 +21,7 @@
         />
     </head>
     <body>
-        <!-- HEADER PC HTML -->
+        <!-- HEADER DESKTOP HTML -->
         <header class="header-border">
             <div class="header container">
                 <nav class="header-nav">
@@ -268,25 +267,52 @@
                     <h2 class="section-title">What are we doing</h2>
                     <ul class="section-list">
                         <li>
-                            <img
-                                src="./images/img1.jpg"
-                                alt="Screen with a website"
-                                width="360"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/img1.jpg    1x,
+                                        ./images/img1@2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <img
+                                    src="./images/img1.jpg"
+                                    alt="Screen with a website"
+                                    width="360"
+                                />
+                            </picture>
                         </li>
                         <li>
-                            <img
-                                src="./images/img2.jpg"
-                                alt="App screens"
-                                width="360"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/img2.jpg    1x,
+                                        ./images/img2@2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <img
+                                    src="./images/img2.jpg"
+                                    alt="App screens"
+                                    width="360"
+                                />
+                            </picture>
                         </li>
                         <li>
-                            <img
-                                src="./images/img3.jpg"
-                                alt="Phone screen with an app"
-                                width="360"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/img3.jpg    1x,
+                                        ./images/img3@2x.jpg 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <img
+                                    src="./images/img3.jpg"
+                                    alt="Phone screen with an app"
+                                    width="360"
+                                />
+                            </picture>
                         </li>
                     </ul>
                 </div>
@@ -298,11 +324,19 @@
                     <h2 class="section-title">Our Team</h2>
                     <ul class="section-list">
                         <li class="card">
-                            <img
-                                src="./images/mark.jpg"
-                                alt="Mark Guerrero"
-                                width="264"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/mark.jpg    1x,
+                                        ./images/mark@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    src="./images/mark.jpg"
+                                    alt="Mark Guerrero"
+                                    width="264"
+                                />
+                            </picture>
                             <div class="card-text">
                                 <h3 class="list-title">Mark Guerrero</h3>
                                 <p class="text">Product Designer</p>
@@ -363,11 +397,19 @@
                             </div>
                         </li>
                         <li class="card">
-                            <img
-                                src="./images/tom.jpg"
-                                alt="Tom Ford"
-                                width="264"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/tom.jpg    1x,
+                                        ./images/tom@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    src="./images/tom.jpg"
+                                    alt="Tom Ford"
+                                    width="264"
+                                />
+                            </picture>
                             <div class="card-text">
                                 <h3 class="list-title">Tom Ford</h3>
                                 <p class="text">Frontend Developer</p>
@@ -428,11 +470,19 @@
                             </div>
                         </li>
                         <li class="card">
-                            <img
-                                src="./images/camila.jpg"
-                                alt="Camila Garcia"
-                                width="264"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/camila.jpg    1x,
+                                        ./images/camila@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    src="./images/camila.jpg"
+                                    alt="Camila Garcia"
+                                    width="264"
+                                />
+                            </picture>
                             <div class="card-text">
                                 <h3 class="list-title">Camila Garcia</h3>
                                 <p class="text">Marketing</p>
@@ -493,11 +543,19 @@
                             </div>
                         </li>
                         <li class="card">
-                            <img
-                                src="./images/daniel.jpg"
-                                alt="Daniel Wilson"
-                                width="264"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/daniel.jpg    1x,
+                                        ./images/daniel@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    src="./images/daniel.jpg"
+                                    alt="Daniel Wilson"
+                                    width="264"
+                                />
+                            </picture>
                             <div class="card-text">
                                 <h3 class="list-title">Daniel Wilson</h3>
                                 <p class="text">UI Designer</p>
@@ -715,6 +773,8 @@
                 </div>
             </div>
         </footer>
+
+        <!-- MODAL HTML -->
         <div data-modal class="backdrop is-hidden">
             <div class="modal">
                 <button data-modal-close class="close-modal">
@@ -723,7 +783,6 @@
                     </svg>
                 </button>
 
-                <!-- MODAL HTML -->
                 <form class="form">
                     <p>Leave your contacts and we will call you back</p>
                     <div class="form-field">
