@@ -185,7 +185,9 @@ body {
 .mob-social-media-list {
     flex-wrap: wrap;
     display: flex;
-    gap: 56px;
+    justify-content: space-between;
+
+    /* gap: 56px; */
 }
 
 .is-hidden {
@@ -198,10 +200,10 @@ body {
     overflow: hidden;
 }
 
-@media screen and (max-width: 425px) {
-    .mob-social-media-list {
+@media screen and (max-width: 424px) {
+    /* .mob-social-media-list {
         gap: 24px;
-    }
+    } */
 
     .mob-header-contact-list li:first-child {
         font-size: 24px;
@@ -282,7 +284,7 @@ body {
     }
 
     .header-contact {
-        margin-left: 332px;
+        margin-left: auto;
     }
 
     .header-contact-list {
@@ -1026,12 +1028,13 @@ body {
 /* !!!!!!!!!!!!!!!!!!!!!! */
 
 .portfolio-pad {
-    padding: 96px 0 120px 0;
+    padding: 100px 0 120px 0;
 }
 
 .portfolio-button {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 24px;
 
     margin-bottom: 72px;
@@ -1069,7 +1072,6 @@ body {
 .portfolio {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 48px 24px;
 }
 
@@ -1135,4 +1137,38 @@ body {
 .portfolio .card-text:hover {
     border: 1px solid var(--accent-color-light);
     border-top: 0;
+}
+
+/* !!! PORTFOLIO ADAPTIVE !!! */
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .portfolio-pad {
+        padding: 64px 0 96px 0;
+    }
+
+    .portfolio-button {
+        margin-bottom: 64px;
+    }
+
+    .portfolio-pad .container {
+        padding: 0 16px;
+    }
+
+    .portfolio-item {
+        width: 356px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .portfolio-pad {
+        padding: 48px 0 48px 0;
+    }
+
+    .portfolio-button {
+        margin-bottom: 48px;
+    }
+
+    .portfolio {
+        justify-content: center;
+    }
 }
